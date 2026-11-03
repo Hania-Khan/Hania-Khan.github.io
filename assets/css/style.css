@@ -186,3 +186,8 @@ img{max-width:100%}
 .cbtns{display:flex;gap:8px;user-select:none}
 .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;border-radius:6px;z-index:100}
 .skip:focus{left:16px}
+
+
+/* About section */
+#about .intro + .intro{margin-top:-16px}
+.subhead{font-size:var(--s1);font-weight:700;margin:8px 0 18px}

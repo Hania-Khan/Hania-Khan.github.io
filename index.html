@@ -35,6 +35,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#work">Selected work</a></li>
+      <li><a href="#portals">Portals</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -55,7 +56,7 @@
       <p class="lede">I write production code across the stack (React and TypeScript on the front end, Node.js and Scala services behind it) and I stay with it through testing, release and production support. I've shipped in fintech, e-commerce and client consultancy. Most recently, on a consumer platform with 64M+ users, I built internal portals and a notification system, delivered third-party integrations, and led the design of 16+ product modules, from API design through performance tuning and release.</p>
       <div class="meta">
         <span class="chip ok">Full UK right to work</span>
-        <span class="chip">Luton, UK</span>
+        <span class="chip">London, UK</span>
       </div>
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch</a>
@@ -94,7 +95,7 @@
     <div>
       <h2>About</h2>
       <p class="intro">I'm a software engineer. I've built and run systems that people depend on every day: a fintech consumer platform with 64M+ users, a live e-commerce platform, and web and mobile applications for UK and international clients.</p>
-      <p class="intro">I'm comfortable owning a feature from the requirement to production, and I enjoy all the parts in between: designing the API, writing the front end and back end, integrating with other systems, testing it properly and keeping it healthy once it's live. I'm based in Luton, have full UK right to work, and I'm open to software engineering roles across the UK tech industry.</p>
+      <p class="intro">I'm comfortable owning a feature from the requirement to production, and I enjoy all the parts in between: designing the API, writing the front end and back end, integrating with other systems, testing it properly and keeping it healthy once it's live. I'm based in UK, have full right to work, and I'm open to software engineering roles across the UK tech industry.</p>
       <h3 class="subhead">How I work</h3>
       <div class="skills">
         <div><h3>Start from the requirement</h3><p>I pin down scope and performance targets with the business before writing code, so what I build is what was needed.</p></div>
@@ -128,18 +129,6 @@
       </article>
 
       <div class="cases">
-        <article class="case">
-          <p class="ctx">JazzCash · Internal tools</p>
-          <h3>Building the CAPEX &amp; DFS Inventory portals, front end to back end</h3>
-          <p>I built two enterprise portals myself, writing both the React front end and the Node.js back end. The CAPEX portal is how the planning team, the CEO and CTO, and project managers track infrastructure spend and funds per project.</p>
-          <ul>
-            <li>Dashboards, multi-step approval workflows, validated forms and data tables over fairly complex business rules.</li>
-            <li>Role-based access and controlled API access, so each role sees and approves only what it should.</li>
-            <li>Taken from requirements through testing to production deployment.</li>
-          </ul>
-          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST</span><span class="tag">RBAC</span></div>
-        </article>
-
         <article class="case">
           <p class="ctx">JazzCash · Platform service</p>
           <h3>Notification system</h3>
@@ -279,9 +268,57 @@
     </div>
   </section>
 
+  <!-- PORTALS -->
+  <section class="block" id="portals">
+    <div class="slabel"><b>03</b>Internal portals</div>
+    <div>
+      <h2>Internal portals</h2>
+      <p class="intro">Two enterprise web applications I built at JazzCash, writing both the React front end and the Node.js back end, and taking each from requirements through testing to production. Screens marked “recreated” are faithful mock-ups with sample data, because the real ones hold internal information.</p>
+      <div class="cases">
+        <article class="case">
+          <p class="ctx">JazzCash · Finance &amp; planning</p>
+          <h3>CAPEX portal</h3>
+          <p>Infrastructure spending at JazzCash needed one place where planners and leadership could see what had been budgeted, approved and spent, project by project. I built the CAPEX portal to do that. The planning team, the CEO and CTO, and project managers use it to track infrastructure spend and the funds allocated to each project.</p>
+          <ul>
+            <li><strong>Dashboards</strong> showing spend against budget across projects, so leadership can see where funds stand at a glance.</li>
+            <li><strong>Approval workflows</strong> that move requests through the right approvers in order, with each step recorded.</li>
+            <li><strong>Validated forms</strong> for raising and updating requests, with the business rules checked on both the client and the server.</li>
+            <li><strong>Budget and expenditure history</strong> per project, with reports generated from the same data.</li>
+            <li><strong>Data tables</strong> with filtering and sorting for working through large sets of projects and line items.</li>
+            <li><strong>Role-based access</strong>, so planners, project managers and executives each see and act on only what their role allows.</li>
+          </ul>
+          <div class="shots mock">
+            <div><button class="shot" type="button"><img src="assets/img/capex-dashboard.jpg" alt="Recreated CAPEX dashboard with sample data: approved budget, spend to date, pending approvals, budget against spend by project and recent requests" loading="lazy" width="1400" height="590"></button><p class="shot-cap">Dashboard · recreated UI with sample data, not a live screenshot</p></div>
+            <div><button class="shot" type="button"><img src="assets/img/capex-approval.jpg" alt="Recreated CAPEX approval screen with sample data: request details, line items, a five-step approval trail and the project budget impact" loading="lazy" width="1400" height="660"></button><p class="shot-cap">Approval workflow · recreated UI with sample data, not a live screenshot</p></div>
+            <div><button class="shot" type="button"><img src="assets/img/capex-login.jpg" alt="CAPEX Portal sign-in page listing its features: processing capital expenditure, tracking project budgets and expenditure history, and generating reports and managing approvals" loading="lazy" width="1400" height="672"></button><p class="shot-cap">CAPEX Portal · sign-in</p></div>
+          </div>
+          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST APIs</span><span class="tag">RBAC</span></div>
+        </article>
+
+        <article class="case">
+          <p class="ctx">JazzCash · Operations</p>
+          <h3>DFS Inventory portal</h3>
+          <p>JazzCash's digital financial services (DFS) run on a large estate of platforms, hardware and software licences. I built the DFS Inventory portal as one place to record and manage all of it, front end to back end on the same stack as the CAPEX portal.</p>
+          <ul>
+            <li><strong>Inventory modules</strong> for platforms, hardware and software licences, each with its own validated forms and searchable data tables.</li>
+            <li><strong>Utilisation tracking</strong>, so teams can see how resources are actually being used.</li>
+            <li><strong>Dashboard</strong> giving an overview across the whole estate.</li>
+            <li><strong>Approval workflows</strong> for changes, so updates are reviewed before they take effect.</li>
+            <li><strong>User management</strong> with role-based access and controlled API access, keeping each team to the data and actions it needs.</li>
+          </ul>
+          <div class="shots mock">
+            <div><button class="shot" type="button"><img src="assets/img/dfs-dashboard.jpg" alt="DFS Inventory portal after sign-in, with navigation for Dashboard, Inventory, Platform, Licenses, Hardware, Utilizations, TPs, Users and Profile" loading="lazy" width="1168" height="571"></button><p class="shot-cap">DFS Inventory · modules</p></div>
+            <div><button class="shot" type="button"><img src="assets/img/dfs-hardware.jpg" alt="Recreated DFS Inventory hardware table with sample data: asset tag, model, platform, site, utilisation, warranty and status, with search and filters" loading="lazy" width="1400" height="650"></button><p class="shot-cap">Hardware inventory · recreated UI with sample data, not a live screenshot</p></div>
+          </div>
+          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST APIs</span><span class="tag">RBAC</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- EXPERIENCE -->
   <section class="block" id="experience">
-    <div class="slabel"><b>03</b>Experience</div>
+    <div class="slabel"><b>04</b>Experience</div>
     <div>
       <h2>Experience</h2>
       <p class="intro">Solution design, full-stack development, DevOps and production support, across fintech consumer platforms, e-commerce and client projects.</p>
@@ -292,7 +329,7 @@
             <h3>Software Engineer</h3>
             <p class="org">JazzCash · Islamabad</p>
             <ul>
-              <li>Built two enterprise internal portals (CAPEX and DFS Inventory) end to end in React, TypeScript and Node.js: dashboards, approval workflows, validated forms and data tables.</li>
+              <li>Built two enterprise internal portals (<a href="#portals">CAPEX and DFS Inventory</a>) end to end in React, TypeScript and Node.js: dashboards, approval workflows, validated forms and data tables.</li>
               <li>Built the notification system and wrote its unit, regression and load tests.</li>
               <li>Raised sustained throughput on high-traffic modules from ~200 to 800 TPS and cut average response times from ~1.2 s to under 400 ms through caching, horizontal scaling and async processing.</li>
               <li>Built and delivered 8+ third-party partner integrations, then turned the common work into a reusable, contract-first integration pattern.</li>
@@ -337,7 +374,7 @@
 
   <!-- PROJECTS -->
   <section class="block" id="projects">
-    <div class="slabel"><b>04</b>Projects</div>
+    <div class="slabel"><b>05</b>Projects</div>
     <div>
       <h2>Projects</h2>
       <p class="intro">Two end-to-end systems I'm building now, outside any employer's stack.</p>
@@ -360,7 +397,7 @@
 
   <!-- SKILLS -->
   <section class="block" id="skills">
-    <div class="slabel"><b>05</b>Skills</div>
+    <div class="slabel"><b>06</b>Skills</div>
     <div>
       <h2>Toolkit</h2>
       <div class="skills">
@@ -379,7 +416,7 @@
 
   <!-- RECOGNITION -->
   <section class="block" id="recognition">
-    <div class="slabel"><b>06</b>Recognition</div>
+    <div class="slabel"><b>07</b>Recognition</div>
     <div>
       <h2>Recognition &amp; credentials</h2>
       <div class="awards">
@@ -393,7 +430,7 @@
 
   <!-- CONTACT -->
   <section class="block" id="contact">
-    <div class="slabel"><b>07</b>Contact</div>
+    <div class="slabel"><b>08</b>Contact</div>
     <div>
       <h2>Let's talk</h2>
       <p class="intro">I'm looking for Software Engineer roles (full stack, backend, integration or forward deployed) across the UK tech industry, in any sector. I have full UK right to work and don't need sponsorship.</p>

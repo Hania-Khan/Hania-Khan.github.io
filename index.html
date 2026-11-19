@@ -39,6 +39,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="themebtn" id="themeBtn" type="button" aria-label="Switch colour theme"><span aria-hidden="true">◐</span></button>
@@ -50,10 +51,10 @@
 <div class="wrap">
   <header class="hero">
     <div>
-      <p class="eyebrow">Software Engineer · Full Stack · Integrations · Performance</p>
+      <p class="eyebrow">Software Engineer · Backend · Full Stack</p>
       <h1>Hania Khan</h1>
       <p class="role">I build, test and run well-integrated systems that hold up under real traffic.</p>
-      <p class="lede">I write production code across the stack (React and TypeScript on the front end, Node.js and Scala services behind it) and I stay with it through testing, release and production support. I've shipped in fintech, e-commerce and client consultancy. Most recently, on a consumer platform with 64M+ users, I built internal portals and a notification system, delivered third-party integrations, and led the design of 16+ product modules, from API design through performance tuning and release.</p>
+      <p class="lede">I write production code across the stack (React and TypeScript on the front end, Node.js and Scala services behind it) and I stay with it through testing, release and production support. I've shipped in fintech, e-commerce and client consultancy. Most recently, on a consumer platform with 64M+ users, I scaled payment capacity fourfold, built two enterprise web portals end to end, delivered 8+ partner integrations, and led the design of 16+ product modules, from API design through performance tuning and release.</p>
       <div class="meta">
         <span class="chip ok">Full UK right to work</span>
         <span class="chip">London, UK</span>
@@ -94,8 +95,8 @@
     <div class="slabel"><b>01</b>About</div>
     <div>
       <h2>About</h2>
-      <p class="intro">I'm a software engineer. I've built and run systems that people depend on every day: a fintech consumer platform with 64M+ users, a live e-commerce platform, and web and mobile applications for UK and international clients.</p>
-      <p class="intro">I'm comfortable owning a feature from the requirement to production, and I enjoy all the parts in between: designing the API, writing the front end and back end, integrating with other systems, testing it properly and keeping it healthy once it's live. I'm based in UK, have full right to work, and I'm open to software engineering roles across the UK tech industry.</p>
+      <p class="intro">I'm a software engineer. I've built and run systems that people depend on every day: a fintech consumer platform with 64M+ users, a live US e-commerce platform, and web applications for UK and international clients.</p>
+      <p class="intro">I'm comfortable owning a feature from the requirement to production, and I enjoy all the parts in between: designing the API, writing the front end and back end, integrating with other systems, testing it properly and keeping it healthy once it's live. I'm based in London, have full UK right to work, and I'm open to software engineering roles across the UK tech industry.</p>
       <h3 class="subhead">How I work</h3>
       <div class="skills">
         <div><h3>Start from the requirement</h3><p>I pin down scope and performance targets with the business before writing code, so what I build is what was needed.</p></div>
@@ -130,18 +131,19 @@
 
       <div class="cases">
         <article class="case">
-          <p class="ctx">JazzCash · Platform service</p>
-          <h3>Notification system</h3>
-          <p>I built the notification system for the app's product modules and owned its testing: unit and regression tests as it was built, then load tests so it held up at production volumes.</p>
-          <div class="tags"><span class="tag">Node.js</span><span class="tag">Unit testing</span><span class="tag">Regression testing</span><span class="tag">Load testing</span></div>
+          <p class="ctx">JazzCash · Engineering training</p>
+          <h3>A 5-day training programme, taught through a working service</h3>
+          <p>I designed and delivered a five-day engineering training programme. To show the whole lifecycle rather than talk about it, I built a fully tested, Kafka-driven notification service as a live demo, and took it from code through Docker and Kubernetes to automated deployment with GitLab and Jenkins pipelines.</p>
+          <div class="tags"><span class="tag">Kafka</span><span class="tag">Node.js</span><span class="tag">Automated testing</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">GitLab CI/CD</span><span class="tag">Jenkins</span></div>
         </article>
         <article class="case">
           <p class="ctx">JazzCash · Platform performance</p>
           <h3>Scaling a high-traffic platform from ~200 to 800 TPS</h3>
           <p>I set TPS targets for each module from screen-level call volumes and active-user data, worked out with the Data Analytics team. Then I worked through the bottlenecks layer by layer: API, middleware and database.</p>
           <ul>
-            <li>Caching at the application and integration layers for read-heavy lookups, so repeated calls stopped hitting core systems.</li>
-            <li>Horizontal scaling and load balancing for high-volume modules, adding nodes against the sized TPS rather than over-provisioning.</li>
+            <li>Caching frequently used data in Redis, so repeated calls stopped hitting core systems.</li>
+            <li>Optimising slow MySQL and MongoDB queries on the busiest journeys.</li>
+            <li>Scaling Node.js services horizontally on OpenShift, adding nodes against the sized TPS rather than over-provisioning.</li>
             <li>Asynchronous hand-off through Kafka and Red Hat AMQ for work that didn't need to block the customer journey.</li>
             <li>Worked with the Data Analytics team on screen-level call volumes to decide how many features a screen could carry without slowing it down.</li>
             <li>Load testing against the targets before each release, with ELK-based observability in production.</li>
@@ -210,23 +212,23 @@
             </svg>
             <figcaption>Simplified request path. The capacity gains came from caching hot lookups, scaling service nodes horizontally behind the gateway, and moving non-blocking work onto queues.</figcaption>
           </figure>
-          <div class="tags"><span class="tag">TPS sizing</span><span class="tag">Caching</span><span class="tag">Horizontal scaling</span><span class="tag">Kafka</span><span class="tag">Red Hat AMQ</span><span class="tag">OpenShift</span><span class="tag">ELK</span></div>
+          <div class="tags"><span class="tag">TPS sizing</span><span class="tag">Redis</span><span class="tag">Query optimisation</span><span class="tag">Horizontal scaling</span><span class="tag">Kafka</span><span class="tag">Red Hat AMQ</span><span class="tag">OpenShift</span><span class="tag">ELK</span></div>
         </article>
 
         <article class="case">
           <p class="ctx">JazzCash · Partner onboarding</p>
           <h3>A reusable pattern for third-party integrations</h3>
-          <p>I onboarded 8+ external partners, from marketing and campaign platforms to insurance and lending providers. The first few were one-off builds. After that I turned the common parts into a pattern later partners could follow: a contract-first API spec, mediation and transformation in WSO2 Micro Integrator, consistent error mapping, and agreed TPS and timeout budgets per partner.</p>
+          <p>I integrated 8+ insurance, lending and payment partners using JavaScript/TypeScript REST APIs, with Kafka events for transaction status updates. The first few were one-off builds. After that I turned the shared code into reusable templates, covered by automated tests and Postman collections, so each new partner was faster and more consistent to onboard. API contracts were agreed with each partner before go-live, with mediation in WSO2 Micro Integrator and agreed TPS and timeout budgets.</p>
           <p>For each project I wrote the Functional Requirement Specification and produced the infrastructure cost estimate and TPS calculation, so business and engineering signed off on the same numbers.</p>
-          <div class="tags"><span class="tag">API design</span><span class="tag">WSO2 Micro Integrator</span><span class="tag">API Management</span><span class="tag">FRS</span><span class="tag">Cost estimation</span></div>
+          <div class="tags"><span class="tag">REST APIs</span><span class="tag">Kafka</span><span class="tag">Postman</span><span class="tag">WSO2 Micro Integrator</span><span class="tag">API Management</span><span class="tag">FRS</span><span class="tag">Cost estimation</span></div>
         </article>
 
         <div class="mini">
           <article class="case">
             <p class="ctx">JazzCash · Security</p>
             <h3>Screen Restriction module</h3>
-            <p>Designed a module to stop sensitive data showing on screens and to roles that shouldn't see it. It closed an open security audit finding ahead of compliance review.</p>
-            <div class="tags"><span class="tag">RBAC</span><span class="tag">Audit</span><span class="tag">Compliance</span></div>
+            <p>Built a module that blocks screenshots and screen recording wherever customers' financial data is shown. It closed an open security audit finding before a compliance review.</p>
+            <div class="tags"><span class="tag">App security</span><span class="tag">Audit</span><span class="tag">Compliance</span></div>
           </article>
           <article class="case">
             <p class="ctx">JazzCash · Campaigns</p>
@@ -243,26 +245,27 @@
 
         <article class="case">
           <p class="ctx">Scala Teams · UpStart Commerce platform</p>
-          <h3>Keeping a live commerce platform healthy</h3>
-          <p>On the UpStart Commerce platform I built a custom UUID generator, worked on Pub/Sub messaging for the PIM microservice, and led L1 and L2 production support for its commerce platform: the admin back office, storefront journeys and the payments, orders, carts, customers and inventory microservices behind them. I worked 50+ tickets a month to root cause and halved average resolution time, using Prometheus and Grafana to spot recurring failure points. I also worked with backend teams on PostgreSQL data models for checkout and order flows.</p>
+          <h3>Building and running a live commerce platform</h3>
+          <p>At Scala Teams I worked on UpStart Commerce, a live US e-commerce platform: the admin back office, storefront journeys and the payments, orders, cart, customer and inventory services behind them. I decoupled the Product Information Management service by publishing product updates asynchronously through Google Cloud Pub/Sub, built a customisable ID generator in Scala for an ID format standard libraries couldn't support, and sped up checkout and order flows by optimising PostgreSQL queries and adding indexes. I also resolved 15+ production incidents a month and halved average resolution time, tracing root causes with Prometheus and Grafana.</p>
           <div class="shots mock">
             <div><button class="shot" type="button"><img src="assets/img/up-platform.jpg" alt="UpStart Commerce admin back office on a laptop" loading="lazy" width="1000" height="579"></button><p class="shot-cap">Admin back office</p></div>
             <div><button class="shot" type="button"><img src="assets/img/up-product.jpg" alt="UpStart Commerce product detail page on mobile" loading="lazy" width="800" height="1080"></button><p class="shot-cap">Product &amp; cart journey</p></div>
             <div><button class="shot" type="button"><img src="assets/img/up-reviews2.jpg" alt="Order tracking and review screen on mobile" loading="lazy" width="800" height="1080"></button><p class="shot-cap">Orders &amp; reviews</p></div>
           </div>
-         <div class="tags"><span class="tag">Production support</span><span class="tag">Microservices</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">PostgreSQL</span></div>
+         <div class="tags"><span class="tag">Scala</span><span class="tag">Pub/Sub</span><span class="tag">Microservices</span><span class="tag">Production support</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">PostgreSQL</span></div>
         </article>
         
         <article class="case">
-          <p class="ctx">AVROX Solutions · Client delivery</p>
+          <p class="ctx">AVROX Solutions · Internship</p>
           <h3>Shipping full-stack products for UK and international clients</h3>
-          <p>At AVROX I worked directly with clients, including UK businesses, to turn their requirements into working web applications, then deployed and ran them. I delivered multiple client projects on schedule.</p>
+          <p>As a software engineer intern at AVROX, an Australian software agency, I delivered full-stack web applications on schedule for UK and international clients, with senior engineers reviewing my code before each release.</p>
           <ul>
             <li>Built across two stacks depending on the client: React.js and Node.js with MongoDB, and PHP with MySQL.</li>
-            <li>Set up CI/CD pipelines and ran Docker and Kubernetes infrastructure, so releases were repeatable rather than manual.</li>
+            <li>Set up Docker-based deployments and CI/CD pipelines, so client releases were consistent and repeatable.</li>
+            <li>Presented progress to clients in demos and turned their feedback into working features.</li>
             <li>Built a conversational chatbot on the OpenAI ChatGPT API, including the prompt design and the integration into the web application.</li>
           </ul>
-          <div class="tags"><span class="tag">Client delivery</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">PHP</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">OpenAI API</span></div>
+          <div class="tags"><span class="tag">Client delivery</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">PHP</span><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">OpenAI API</span></div>
         </article>
       </div>
     </div>
@@ -278,39 +281,39 @@
         <article class="case">
           <p class="ctx">JazzCash · Finance &amp; planning</p>
           <h3>CAPEX portal</h3>
-          <p>Infrastructure spending at JazzCash needed one place where planners and leadership could see what had been budgeted, approved and spent, project by project. I built the CAPEX portal to do that. The planning team, the CEO and CTO, and project managers use it to track infrastructure spend and the funds allocated to each project.</p>
+          <p>Infrastructure spending at JazzCash was tracked in an error-prone Excel workbook used by senior leadership and project managers. I built the CAPEX Management portal end to end to replace it, so planners, leadership (including the CEO and CTO) and project managers have one place to see what has been budgeted, approved and spent, project by project.</p>
           <ul>
             <li><strong>Dashboards</strong> showing spend against budget across projects, so leadership can see where funds stand at a glance.</li>
             <li><strong>Approval workflows</strong> that move requests through the right approvers in order, with each step recorded.</li>
             <li><strong>Validated forms</strong> for raising and updating requests, with the business rules checked on both the client and the server.</li>
             <li><strong>Budget and expenditure history</strong> per project, with reports generated from the same data.</li>
             <li><strong>Data tables</strong> with filtering and sorting for working through large sets of projects and line items.</li>
-            <li><strong>Role-based access</strong>, so planners, project managers and executives each see and act on only what their role allows.</li>
+            <li><strong>Role-based dashboards and access</strong>, so planners, project managers and executives each see and act on only what their role allows.</li>
+            <li><strong>Two-factor login and a full audit trail</strong>, so every change and approval can be traced.</li>
           </ul>
-          <div class="shots mock">
+          <div class="shots screens">
             <div><button class="shot" type="button"><img src="assets/img/capex-dashboard.jpg" alt="Recreated CAPEX dashboard with sample data: approved budget, spend to date, pending approvals, budget against spend by project and recent requests" loading="lazy" width="1400" height="590"></button><p class="shot-cap">Dashboard · recreated UI with sample data, not a live screenshot</p></div>
             <div><button class="shot" type="button"><img src="assets/img/capex-approval.jpg" alt="Recreated CAPEX approval screen with sample data: request details, line items, a five-step approval trail and the project budget impact" loading="lazy" width="1400" height="660"></button><p class="shot-cap">Approval workflow · recreated UI with sample data, not a live screenshot</p></div>
             <div><button class="shot" type="button"><img src="assets/img/capex-login.jpg" alt="CAPEX Portal sign-in page listing its features: processing capital expenditure, tracking project budgets and expenditure history, and generating reports and managing approvals" loading="lazy" width="1400" height="672"></button><p class="shot-cap">CAPEX Portal · sign-in</p></div>
           </div>
-          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST APIs</span><span class="tag">RBAC</span></div>
+          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">RBAC</span></div>
         </article>
 
         <article class="case">
           <p class="ctx">JazzCash · Operations</p>
           <h3>DFS Inventory portal</h3>
-          <p>JazzCash's digital financial services (DFS) run on a large estate of platforms, hardware and software licences. I built the DFS Inventory portal as one place to record and manage all of it, front end to back end on the same stack as the CAPEX portal.</p>
+          <p>JazzCash's digital financial services (DFS) run on a large estate of servers, hardware and software licences across production, disaster-recovery and staging sites. I built the DFS Inventory Management portal to give teams one place to track all of it, including usage and system capacity, front end to back end on the same stack as the CAPEX portal.</p>
           <ul>
-            <li><strong>Inventory modules</strong> for platforms, hardware and software licences, each with its own validated forms and searchable data tables.</li>
-            <li><strong>Utilisation tracking</strong>, so teams can see how resources are actually being used.</li>
+            <li><strong>Inventory modules</strong> for platforms, servers and hardware, and software licences, each with its own validated forms and searchable data tables.</li>
+            <li><strong>Usage and capacity tracking</strong> across production, DR and staging, so teams can see how resources are actually being used.</li>
             <li><strong>Dashboard</strong> giving an overview across the whole estate.</li>
-            <li><strong>Approval workflows</strong> for changes, so updates are reviewed before they take effect.</li>
             <li><strong>User management</strong> with role-based access and controlled API access, keeping each team to the data and actions it needs.</li>
           </ul>
-          <div class="shots mock">
+          <div class="shots screens">
             <div><button class="shot" type="button"><img src="assets/img/dfs-dashboard.jpg" alt="DFS Inventory portal after sign-in, with navigation for Dashboard, Inventory, Platform, Licenses, Hardware, Utilizations, TPs, Users and Profile" loading="lazy" width="1168" height="571"></button><p class="shot-cap">DFS Inventory · modules</p></div>
             <div><button class="shot" type="button"><img src="assets/img/dfs-hardware.jpg" alt="Recreated DFS Inventory hardware table with sample data: asset tag, model, platform, site, utilisation, warranty and status, with search and filters" loading="lazy" width="1400" height="650"></button><p class="shot-cap">Hardware inventory · recreated UI with sample data, not a live screenshot</p></div>
           </div>
-          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST APIs</span><span class="tag">RBAC</span></div>
+          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">RBAC</span></div>
         </article>
       </div>
     </div>
@@ -321,7 +324,7 @@
     <div class="slabel"><b>04</b>Experience</div>
     <div>
       <h2>Experience</h2>
-      <p class="intro">Solution design, full-stack development, DevOps and production support, across fintech consumer platforms, e-commerce and client projects.</p>
+      <p class="intro">Full-stack development, integrations, performance and production support, across fintech, e-commerce and client projects.</p>
       <div class="roles">
         <div class="roleitem">
           <div class="when">Mar 2025 – Jun 2026</div>
@@ -329,43 +332,48 @@
             <h3>Software Engineer</h3>
             <p class="org">JazzCash · Islamabad</p>
             <ul>
-              <li>Built two enterprise internal portals (<a href="#portals">CAPEX and DFS Inventory</a>) end to end in React, TypeScript and Node.js: dashboards, approval workflows, validated forms and data tables.</li>
-              <li>Built the notification system and wrote its unit, regression and load tests.</li>
-              <li>Raised sustained throughput on high-traffic modules from ~200 to 800 TPS and cut average response times from ~1.2 s to under 400 ms through caching, horizontal scaling and async processing.</li>
-              <li>Built and delivered 8+ third-party partner integrations, then turned the common work into a reusable, contract-first integration pattern.</li>
-              <li>Led design and delivery of 16+ app modules: API design, integration, performance validation and UAT.</li>
-              <li>Closed an open security audit finding by designing a role-based Screen Restriction module.</li>
-              <li>Main technical contact between business stakeholders and delivery teams, working in Agile sprints; ran an internal training programme.</li>
+              <li>Increased payment capacity fourfold, from ~200 to 800 TPS, and cut average response time from ~1.2 s to under 400 ms through Redis caching, MySQL and MongoDB query optimisation and horizontal scaling of Node.js services on OpenShift.</li>
+              <li>Built the <a href="#portals">CAPEX Management portal</a> end to end (React, TypeScript, Node.js, Express, MySQL), replacing an error-prone Excel workbook with role-based dashboards, approval workflows, two-factor login and a full audit trail.</li>
+              <li>Built the <a href="#portals">DFS Inventory Management portal</a> to track servers, hardware, software licences, usage and capacity across production, DR and staging sites.</li>
+              <li>Integrated 8+ insurance, lending and payment partners with REST APIs and Kafka events, and turned the shared code into reusable templates covered by automated tests and Postman collections.</li>
+              <li>Designed and delivered a 5-day engineering training programme, building a fully tested Kafka-driven notification service as a live demo of the full lifecycle through Docker, Kubernetes, GitLab and Jenkins.</li>
+              <li>Closed a security audit finding before a compliance review by building a Screen Restriction module that blocks screenshots and screen recording of customers' financial data.</li>
+              <li>Worked in two-week Agile sprints with product owners, QA and partner teams, reviewing merge requests in GitLab and agreeing API contracts with partners before go-live.</li>
             </ul>
-            <div class="tags"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">Kubernetes / OpenShift</span><span class="tag">GitLab</span><span class="tag">Jenkins</span><span class="tag">Jest</span></div>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">Kubernetes / OpenShift</span><span class="tag">GitLab</span><span class="tag">Jenkins</span><span class="tag">Postman</span><span class="tag">Jest</span></div>
           </div>
         </div>
         <div class="roleitem">
           <div class="when">Aug 2024 – Mar 2025</div>
           <div>
             <h3>Software Engineer</h3>
-            <p class="org">Scala Teams · Islamabad · UpStart Commerce platform</p>
+            <p class="org">Scala Teams · Islamabad · US e-commerce platform (UpStart Commerce)</p>
             <ul>
-              <li>Built a custom, configurable UUID generator to replace the built-in libraries on a live US e-commerce platform.</li>
-              <li>Worked on Google Cloud Pub/Sub messaging for the Product Information Management (PIM) microservice.</li>
-              <li>Led L1/L2 production support, handling 50+ tickets a month and halving average resolution time.</li>
-              <li>Diagnosed issues across the orders, carts, customers, inventory and checkout microservices, using Prometheus and Grafana to find recurring failure points.</li>
+              <li>Decoupled the Scala-based Product Information Management service on Google Cloud by publishing product updates asynchronously through Pub/Sub, so one slow service couldn't hold up product changes.</li>
+              <li>Built a customisable in-house ID generator in Scala for a platform-specific ID format that standard libraries couldn't support.</li>
+              <li>Sped up high-traffic checkout and order flows by optimising PostgreSQL queries and adding indexes.</li>
+              <li>Resolved 15+ production incidents a month across payments, orders, cart, customer and inventory services, halving average resolution time by tracing root causes with Prometheus and Grafana.</li>
+              <li>Reduced repeat support requests with clear Confluence documentation, and worked in a distributed Scrum team across Pakistan and US time zones.</li>
             </ul>
-            <div class="tags"><span class="tag">Scala</span><span class="tag">Google Cloud</span><span class="tag">Pub/Sub</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Prometheus</span><span class="tag">Grafana</span></div>
+            <div class="tags"><span class="tag">Scala</span><span class="tag">Google Cloud</span><span class="tag">Pub/Sub</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Bitbucket</span><span class="tag">Confluence</span></div>
           </div>
         </div>
+      </div>
+      <h3 class="subhead">Internship</h3>
+      <div class="roles">
         <div class="roleitem">
           <div class="when">Mar 2024 – Aug 2024</div>
           <div>
-            <h3>Full Stack Developer</h3>
-            <p class="org">AVROX Solutions · Remote</p>
+            <h3>Software Engineer Intern</h3>
+            <p class="org">AVROX Solutions · Remote · Australian software agency</p>
             <ul>
-              <li>Built and shipped full-stack apps for UK and international clients with React.js, Node.js, MongoDB, PHP and MySQL.</li>
-              <li>Set up CI/CD pipelines and ran Docker and Kubernetes infrastructure for client deployments.</li>
-              <li>Delivered 5 client projects on schedule, coordinating directly with clients on scope and timelines.</li>
+              <li>Delivered multiple full-stack web applications on schedule for UK and international clients, with React.js front ends and Node.js/PHP back ends on MongoDB and MySQL.</li>
+              <li>Worked in an Agile team, tracking sprint work in Jira and using Git feature branches, with senior engineers reviewing my code before each client release.</li>
+              <li>Presented progress to clients in demos and turned their feedback into working features.</li>
+              <li>Made client releases consistent and repeatable with Docker-based deployments and CI/CD pipelines.</li>
               <li>Built a chatbot integrated with the OpenAI ChatGPT API.</li>
             </ul>
-            <div class="tags"><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">OpenAI API</span></div>
+            <div class="tags"><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">PHP</span><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Git</span><span class="tag">Jira</span></div>
           </div>
         </div>
       </div>
@@ -377,19 +385,13 @@
     <div class="slabel"><b>05</b>Projects</div>
     <div>
       <h2>Projects</h2>
-      <p class="intro">Two end-to-end systems I'm building now, outside any employer's stack.</p>
+      <p class="intro">What I'm building now, outside any employer's stack.</p>
       <div class="code-proj">
         <article class="case">
-          <p class="ctx">In progress</p>
+          <p class="ctx">In progress · Nov 2026 – present</p>
           <h3>PayGuard AI</h3>
-          <p>A cloud-native transaction platform: an immutable ledger, routing across multiple providers, a rules-based fraud engine and an AI-assisted investigator for flagged cases, with a Next.js dashboard on top.</p>
-          <div class="tags"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Ledger design</span><span class="tag">Fraud rules</span></div>
-        </article>
-        <article class="case">
-          <p class="ctx">In progress</p>
-          <h3>DevPilot AI</h3>
-          <p>An agentic RAG assistant for engineering teams. It ingests a code repository and investigates simulated production incidents, tracing them back through the code and docs.</p>
-          <div class="tags"><span class="tag">RAG</span><span class="tag">AI agents</span><span class="tag">FastAPI</span><span class="tag">React</span></div>
+          <p>A payments platform I'm building as public code: a double-entry ledger, duplicate-payment protection, automatic failover between payment providers, webhooks and reconciliation, all tested in an automated CI pipeline.</p>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Kafka</span><span class="tag">Next.js</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Playwright</span></div>
         </article>
       </div>
     </div>
@@ -401,29 +403,30 @@
     <div>
       <h2>Toolkit</h2>
       <div class="skills">
-        <div><h3>Languages</h3><p>TypeScript, JavaScript, Scala, SQL; Java and C++ (academic projects)</p></div>
-        <div><h3>Front end</h3><p>React.js, Next.js, dashboards, forms and data-heavy UIs</p></div>
-        <div><h3>Back end</h3><p>Node.js / Express, NestJS, REST APIs, microservices, event-driven services</p></div>
-        <div><h3>Testing &amp; quality</h3><p>Jest, unit, integration and regression testing, load testing, Postman</p></div>
-        <div><h3>Data &amp; messaging</h3><p>PostgreSQL, MySQL, MongoDB, Redis, Apache Kafka, Red Hat AMQ, Google Pub/Sub, WSO2 Micro Integrator</p></div>
-        <div><h3>Cloud &amp; DevOps</h3><p>AWS, Google Cloud, Azure (exposure), Docker, Kubernetes / OpenShift, Jenkins, GitLab CI/CD</p></div>
-        <div><h3>Observability</h3><p>Prometheus, Grafana, ELK Stack, incident response, capacity planning</p></div>
-        <div><h3>AI-assisted engineering</h3><p>Claude, ChatGPT and Gemini in day-to-day development, prompt engineering, OpenAI API integration</p></div>
-        <div><h3>Ways of working</h3><p>Agile / Scrum, API design, system design, Jira, Confluence, Draw.io</p></div>
+        <div><h3>Languages</h3><p>JavaScript, TypeScript, Scala, SQL, Python (working knowledge)</p></div>
+        <div><h3>Backend</h3><p>Node.js, Express.js, NestJS, REST APIs, microservices</p></div>
+        <div><h3>Frontend</h3><p>React.js, Next.js, HTML, CSS, web design</p></div>
+        <div><h3>Databases &amp; caching</h3><p>PostgreSQL, MySQL, MongoDB, Redis</p></div>
+        <div><h3>Cloud &amp; infrastructure</h3><p>AWS, Google Cloud Platform, Docker, Kubernetes, OpenShift</p></div>
+        <div><h3>Messaging &amp; distributed systems</h3><p>Apache Kafka, Google Cloud Pub/Sub</p></div>
+        <div><h3>CI/CD &amp; version control</h3><p>GitHub Actions, GitLab CI/CD, Jenkins, Git, Bitbucket</p></div>
+        <div><h3>Testing</h3><p>Jest, Playwright, unit, integration and load testing, Postman</p></div>
+        <div><h3>Monitoring</h3><p>Prometheus, Grafana, ELK Stack</p></div>
       </div>
     </div>
   </section>
 
   <!-- RECOGNITION -->
-  <section class="block" id="recognition">
-    <div class="slabel"><b>07</b>Recognition</div>
+  <section class="block" id="achievements">
+    <div class="slabel"><b>07</b>Achievements</div>
     <div>
-      <h2>Recognition &amp; credentials</h2>
+      <h2>Achievements &amp; credentials</h2>
       <div class="awards">
         <div class="award"><span class="yr">2024</span><div><h3>Huawei ICT Competition · Regional Finalist</h3><p>Represented Pakistan in the Middle East &amp; Central Asia round, in cloud and AI.</p></div></div>
         <div class="award"><span class="yr">2024</span><div><h3>Cogent Labs IT Competition · Top 5 National</h3><p>Top five of 100+ teams with HealthCane, a computer vision system that detects abnormal human activity and raises real-time alerts.</p></div></div>
-        <div class="award"><span class="yr">AWS</span><div><h3>AWS Certified Cloud Practitioner</h3></div></div>
-        <div class="award"><span class="yr">Degree</span><div><h3>BSc Software Engineering · FAST-NUCES, Islamabad</h3></div></div>
+        <div class="award"><span class="yr">2026</span><div><h3>AWS Certified Cloud Practitioner</h3><p>Amazon Web Services</p></div></div>
+        <div class="award"><span class="yr">2024</span><div><h3>Reactive Architecture: Reactive Microservices, Domain-Driven Design, CQRS &amp; Event Sourcing</h3><p>Akka</p></div></div>
+        <div class="award"><span class="yr">2020–24</span><div><h3>BSc Software Engineering · FAST-NUCES, Islamabad</h3></div></div>
       </div>
     </div>
   </section>

@@ -191,3 +191,10 @@ img{max-width:100%}
 /* About section */
 #about .intro + .intro{margin-top:-16px}
 .subhead{font-size:var(--s1);font-weight:700;margin:8px 0 18px}
+
+/* Wide app screenshots (portals): 2 columns, first image full width when the count is odd, no cropping */
+.shots.screens{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:6px}
+.shots.screens>div:first-child:nth-last-child(odd){grid-column:1/-1}
+.shots.screens .shot{background:#fff}
+.shots.screens .shot img{width:100%;height:auto}
+@media (max-width:620px){.shots.screens{grid-template-columns:1fr}}
